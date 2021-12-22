@@ -3,6 +3,9 @@ or
 Get: http://localhost:8080/tourPackages/packahgeid ie BC
 Get http://localhost:8080/tourPackages/search/findByName?name=Kids%20California
 
+Get: http://localhost:8080/tours?size=3&page=1&sort=title,asc
+Get: http://localhost:8080/tours/search/findByTourPackageCode?code=CC
+Get: http://localhost:8080/tours/search/findByTourPackageCode?code=CC&size=2&sort=title,asc
 Post: (creates new db entry)
 {
      "code": "ZC",
@@ -15,4 +18,5 @@ Put: (chnges name from http://localhost:8080/tourPackages/ZC)
 }
 delete: (http://localhost:8080/tourPackages/ZC)
     }
-    http://localhost:8080/tours/search/findByTourPackageCode?code=CC
+
+
