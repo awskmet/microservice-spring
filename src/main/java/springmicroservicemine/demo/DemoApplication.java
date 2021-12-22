@@ -23,8 +23,10 @@ import static com.fasterxml.jackson.annotation.PropertyAccessor.FIELD;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
-    @Value("${ec.importfile}")
-    private String inputFile;
+
+    @Value("${demo.importfile}")
+    private String importFile;
+
     @Autowired
     private TourService tourService;
     @Autowired
@@ -59,7 +61,8 @@ public class DemoApplication implements CommandLineRunner {
     @Override
     //after app launches but before accept web requests this is invoked and cmd line args invoked, we want t set up DB(object scope so we can access injected services)
     public void run(String... args) throws Exception {
-
+        createTourPackages();
+        createTours(importFile);
     }
     private static class TourFromFile {
         //fields

@@ -1,0 +1,18 @@
+Get: http://localhost:8080/tourPackages
+or
+Get: http://localhost:8080/tourPackages/packahgeid ie BC
+Get http://localhost:8080/tourPackages/search/findByName?name=Kids%20California
+
+Post: (creates new db entry)
+{
+     "code": "ZC",
+    "name": "Zany Cali"
+}
+Put: (chnges name from http://localhost:8080/tourPackages/ZC)
+{
+
+    "name": "Zany Zany Cali"
+}
+delete: (http://localhost:8080/tourPackages/ZC)
+    }
+    http://localhost:8080/tours/search/findByTourPackageCode?code=CC
